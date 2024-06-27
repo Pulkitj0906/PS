@@ -47,7 +47,7 @@ const Iphone = ({
   const names=['Rajeev','Harkirat','Baby','Motivator','GujjuBusinessman']
 
   return (
-    <div className="w-96 h-[90%] relative ml-[20%] my-[2%] p-4 rounded-[4rem]">
+    <div className="w-96 h-[90%] relative md:ml-[20%] my-[2%] p-4 rounded-[10rem]">
       <Image
         alt="l;kj"
         src={"/iphone.png"}
@@ -55,9 +55,9 @@ const Iphone = ({
         height={999}
         className="size-full absolute inset-0 pointer-events-none"
       />
-      <div className="size-full bg-white -z-10 rounded-[2rem] flex flex-col">
+      <div className="size-full bg-white -z-10 rounded-[4rem] flex flex-col">
         <BorderBeam />
-        <section className="bg-gray-100 rounded-t-3xl h-12 flex items-center justify-between px-10">
+        <section className="bg-gray-100 rounded-t-[4rem] h-12 flex items-center justify-between px-10">
           <h1>{currentTime()}</h1>
           <h1 className="flex items-center justify-center gap-1">
             <TbAntennaBars5 />

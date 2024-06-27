@@ -167,12 +167,12 @@ const Hompage = () => {
 
   return (
     <div className="h-screen overflow-clip relative">
-      <div className="px-12 pt-10 flex justify-between ">
-        <div className="text-3xl flex gap-4  text-slate-100">
+      <div className="px-12 pt-10 flex justify-between text- md:text-3xl ">
+        <div className="flex gap-4  text-slate-100">
           <h1>Characters</h1>
           <h1 className="text-slate-100/50">About</h1>
         </div>
-        <div className="text-3xl flex gap-10  text-slate-100">
+        <div className="flex gap-4 justify-center items-center md:gap-10  text-slate-100">
           <h1>
             <IoMdSearch />
           </h1>
@@ -192,7 +192,7 @@ const Hompage = () => {
             ref={idx == active ? activeRef : null}
             key={idx}
             onClick={() => setActive(idx)}
-            className={` ring-white relative transition-[height,width] duration-700 bg-[#111]/10 backdrop-blur text-white flex items-center justify-center rounded-xl -all ${
+            className={` ring-white shrink-0 relative transition-[height,width] duration-700 bg-[#111]/10 backdrop-blur text-white flex items-center justify-center rounded-xl -all ${
               idx == active ? "size-28" : "size-20 ring-1 "
             }`}
           >
@@ -226,13 +226,13 @@ const Hompage = () => {
           onClick={() =>
             router.push("/chat/" + stateImages[cities[active]].name)
           }
-          className="w-fit self-center rounded-xl active:scale-90 cursor-pointer bg-orange-300 p-2 text-slate-100"
+          className="w-fit self-center rounded-xl text-center active:scale-90 cursor-pointer bg-orange-300 p-2 text-slate-100"
         >
           Have a conversation now!
         </div>
       </div>
       <div
-        className={`absolute -bottom-1 right-10 overflow-clip z-10 transition-transform duration-500 ${
+        className={`md:flex hidden absolute -bottom-1 right-10 overflow-clip z-10 transition-transform duration-500 ${
           state && "scale-150"
         } `}
       >
