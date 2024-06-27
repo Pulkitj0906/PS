@@ -138,32 +138,32 @@ const Hompage = () => {
     }, 1200);
   };
 
-  // if (!enter) {
-  //   return (
-  //     <div onClick={EnterHomescreen} className={`bg-black h-screen relative flex-center flex-col gap-20 {'size-0':'size-full'}`}>
-  //     <h1 className={`${checking?'text-[0px]':'text-xl'} text-white/40`}>Click anywhere to get started.</h1>
-  //       <Particles
-  //         className={`absolute inset-0 transition-opacity duration-1000 ${checking?'opacity-0':'opacity-50'} `}
-  //         color="c9a227"
-  //         vx={0.2}
-  //         vy={-0.1}
-  //         size={2}
-  //         quantity={300}
-  //       />
-  //       <div className={`${checking?'size-0':'size-20'} duration-1000 pop2 rounded-full bg-white z-10 flex-center relative`}>
-  //         <span className="pop absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
-  //         <Image
-  //           alt=""
-  //           src={"/ps.png"}
-  //           height={99}
-  //           width={99}
-  //           className="size-"
-  //         />
-  //       </div>
-  //       <h1 className={`${checking?'text-[0px]':'text-2xl'} duration-1000 text-white`}>People Simulator</h1>
-  //     </div>
-  //   );
-  // }
+  if (!enter) {
+    return (
+      <div onClick={EnterHomescreen} className={`bg-black h-screen relative flex-center flex-col gap-20 {'size-0':'size-full'}`}>
+      <h1 className={`${checking?'text-[0px]':'text-xl'} text-white/40`}>Click anywhere to get started.</h1>
+        <Particles
+          className={`absolute inset-0 transition-opacity duration-1000 ${checking?'opacity-0':'opacity-50'} `}
+          color="c9a227"
+          vx={0.2}
+          vy={-0.1}
+          size={2}
+          quantity={300}
+        />
+        <div className={`${checking?'size-0':'size-20'} duration-1000 pop2 rounded-full bg-white z-10 flex-center relative`}>
+          <span className="pop absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
+          <Image
+            alt=""
+            src={"/ps.png"}
+            height={99}
+            width={99}
+            className="size-"
+          />
+        </div>
+        <h1 className={`${checking?'text-[0px]':'text-2xl'} duration-1000 text-white`}>People Simulator</h1>
+      </div>
+    );
+  }
 
   return (
     <div className="h-screen overflow-clip relative">
@@ -232,7 +232,7 @@ const Hompage = () => {
         </div>
       </div>
       <div
-        className={`absolute -bottom-1 right-10 overflow-clip z-10 transition-transform duration-1000 ${
+        className={`absolute -bottom-1 right-10 overflow-clip z-10 transition-transform duration-500 ${
           state && "scale-150"
         } `}
       >
@@ -256,7 +256,7 @@ const Hompage = () => {
       </div>
       {state}
       <div
-        className={`absolute inset-0 bg-black size-full transition-transform duration-1000 ${
+        className={`absolute inset-0 bg-black size-full transition-transform duration-500 ${
           state ? "translate-x-0" : "translate-y-full"
         }`}
       >
